@@ -38,6 +38,8 @@ class AdminController extends Controller
             return redirect()->route('custom.verification.form')->with('status', 'O email de verificação foi mandada para o seu email.');
 
             return redirect()->back()->withErrors(['email' => 'As credenciais fornecidas estão incorretas.']);
+
+            //teste
         }
     }
 }
