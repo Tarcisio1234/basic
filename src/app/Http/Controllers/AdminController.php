@@ -39,7 +39,7 @@ class AdminController extends Controller
 
             return redirect()->back()->withErrors(['email' => 'As credenciais fornecidas estão incorretas.']);
 
-            
+            //teste
         }
     }
 }
