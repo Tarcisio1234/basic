@@ -13,12 +13,13 @@ class VerificarionCodeMail extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $code;
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct($code)
     {
-        //
+        $this->code = $code;
     }
 
     /**
@@ -27,7 +28,7 @@ class VerificarionCodeMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Verificarion Code Mail',
+            subject: 'Seu código de verificação',
         );
     }
 
@@ -37,7 +38,8 @@ class VerificarionCodeMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'email.verification_code',
+            with: ['code' => $this->code]
         );
     }
 
