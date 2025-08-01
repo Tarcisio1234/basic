@@ -2,16 +2,16 @@
 @section('admin')
 <div class="content">
 
-                    <!-- Start Content-->
+                    <!-- Início do Conteúdo-->
                     <div class="container-xxl">
 
                         <div class="py-3 d-flex align-items-sm-center flex-sm-row flex-column">
                             <div class="flex-grow-1">
-                                <h4 class="fs-18 fw-semibold m-0">Dashboard</h4>
+                                <h4 class="fs-18 fw-semibold m-0">Painel de Controle</h4>
                             </div>
                         </div>
 
-                        <!-- start row -->
+                        <!-- início da linha -->
                         <div class="row">
                             <div class="col-md-12 col-xl-12">
                                 <div class="row g-3">
@@ -20,7 +20,7 @@
                                         <div class="card">
                                             <div class="card-body">
                                                 <div class="d-flex align-items-center">
-                                                    <div class="fs-14 mb-1">Website Traffic</div>
+                                                    <div class="fs-14 mb-1">Tráfego do Site</div>
                                                 </div>
 
                                                 <div class="d-flex align-items-baseline mb-2">
@@ -41,7 +41,7 @@
                                         <div class="card">
                                             <div class="card-body">
                                                 <div class="d-flex align-items-center">
-                                                    <div class="fs-14 mb-1">Conversion rate</div>
+                                                    <div class="fs-14 mb-1">Taxa de Conversão</div>
                                                 </div>
 
                                                 <div class="d-flex align-items-baseline mb-2">
@@ -62,7 +62,7 @@
                                         <div class="card">
                                             <div class="card-body">
                                                 <div class="d-flex align-items-center">
-                                                    <div class="fs-14 mb-1">Session duration</div>
+                                                    <div class="fs-14 mb-1">Duração da Sessão</div>
                                                 </div>
 
                                                 <div class="d-flex align-items-baseline mb-2">
@@ -83,7 +83,7 @@
                                         <div class="card">
                                             <div class="card-body">
                                                 <div class="d-flex align-items-center">
-                                                    <div class="fs-14 mb-1">Active Users</div>
+                                                    <div class="fs-14 mb-1">Usuários Ativos</div>
                                                 </div>
 
                                                 <div class="d-flex align-items-baseline mb-2">
@@ -100,10 +100,10 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div> <!-- end sales -->
-                        </div> <!-- end row -->
+                            </div> <!-- fim vendas -->
+                        </div> <!-- fim linha -->
 
-                        <!-- Start Monthly Sales -->
+                        <!-- Início Vendas Mensais -->
                         <div class="row">
                             <div class="col-md-6 col-xl-8">
                                 <div class="card">
@@ -113,7 +113,7 @@
                                             <div class="border border-dark rounded-2 me-2 widget-icons-sections">
                                                 <i data-feather="bar-chart" class="widgets-icons"></i>
                                             </div>
-                                            <h5 class="card-title mb-0">Monthly Sales</h5>
+                                            <h5 class="card-title mb-0">Vendas Mensais</h5>
                                         </div>
                                     </div>
 
@@ -132,7 +132,7 @@
                                             <div class="border border-dark rounded-2 me-2 widget-icons-sections">
                                                 <i data-feather="tablet" class="widgets-icons"></i>
                                             </div>
-                                            <h5 class="card-title mb-0">Best Traffic Source</h5>
+                                            <h5 class="card-title mb-0">Melhor Fonte de Tráfego</h5>
                                         </div>
                                     </div>
 
@@ -142,8 +142,8 @@
                                                 <tbody>
                                                     <thead>
                                                         <tr>
-                                                            <th>Network</th>
-                                                            <th colspan="2">Visitors</th>
+                                                            <th>Rede</th>
+                                                            <th colspan="2">Visitantes</th>
                                                         </tr>
                                                     </thead>
 
@@ -225,7 +225,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- End Monthly Sales -->
+                        <!-- Fim Vendas Mensais -->
 
                     </div> <!-- container-fluid -->
                 </div>

@@ -1,59 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
     <head>
 
         <meta charset="utf-8" />
-        <title>Admin Dashboard | Tapeli - Responsive Admin Dashboard Template</title>
+        <title>Painel Administrativo | Tapeli - Template de Dashboard Responsivo</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc."/>
+        <meta name="description" content="Um tema administrativo completo que pode ser usado para construir CRM, CMS, etc."/>
         <meta name="author" content="Zoyothemes"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
         <!-- App favicon -->
         <link rel="shortcut icon" href="{{asset('backend/assets/images/favicon.ico')}}">
 
-        <!-- App css -->
+        <!-- CSS do App -->
         <link href="{{asset('backend/assets/css/app.min.css')}}" rel="stylesheet" type="text/css" id="app-style" />
 
-        <!-- Icons -->
+        <!-- Ícones -->
         <link href="{{asset('backend/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
 
     </head>
 
-    <!-- body start -->
+    <!-- início do body -->
     <body data-menu-color="light" data-sidebar="default">
 
-        <!-- Begin page -->
+        <!-- Início da página -->
         <div id="app-layout">
 
 
-            <!-- Topbar Start -->
+            <!-- Barra Superior Início -->
             @include('admin.body.header')
-            <!-- end Topbar -->
+            <!-- fim Barra Superior -->
 
-            <!-- Left Sidebar Start -->
+            <!-- Barra Lateral Esquerda Início -->
             @include('admin.body.sidebar')
-            <!-- Left Sidebar End -->
+            <!-- Barra Lateral Esquerda Fim -->
 
             <!-- ============================================================== -->
-            <!-- Start Page Content here -->
+            <!-- Início do Conteúdo da Página -->
             <!-- ============================================================== -->
 
             <div class="content-page">
-                <!-- content -->
+                <!-- conteúdo -->
             @yield('admin')
                
             @include('admin.body.footer') 
             </div>
             <!-- ============================================================== -->
-            <!-- End Page content -->
+            <!-- Fim do Conteúdo da Página -->
             <!-- ============================================================== -->
 
         </div>
-        <!-- END wrapper -->
+        <!-- FIM do wrapper -->
 
-        <!-- Vendor -->
+        <!-- Bibliotecas -->
         <script src="{{asset('backend/assets/libs/jquery/jquery.min.js')}}"></script>
         <script src="{{asset('backend/assets/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
         <script src="{{asset('backend/assets/libs/simplebar/simplebar.min.js')}}"></script>
@@ -65,10 +65,10 @@
         <!-- Apexcharts JS -->
         <script src="{{asset('backend/assets/libs/apexcharts/apexcharts.min.js')}}"></script>
 
-        <!-- for basic area chart -->
+        <!-- para gráfico de área básico -->
         <script src="https://apexcharts.com/samples/assets/stock-prices.js"></script>
 
-        <!-- Widgets Init Js -->
+        <!-- Inicialização de Widgets JS -->
         <script src="{{asset('backend/assets/js/pages/analytics-dashboard.init.js')}}"></script>
 
         <!-- App js-->
