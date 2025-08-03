@@ -41,7 +41,6 @@
                                         </ul>
 
                                             <div class="tab-content" id="pills-tabContent">
-                                                <form action="">
                                                 <div class="tab-pane fade show active pt-4" id="profile_setting" role="tabpanel" aria-labelledby="setting_tab">
                                                     
                                                     <div class="row">
@@ -55,7 +54,8 @@
                                                                             </div><!--end col-->                                                       
                                                                         </div>
                                                                     </div>
-                                                                    
+                                                <form action="{{ route('profile.store') }}" method="POST" enctype="multipart/form-data">
+                                                    @csrf <!-- Isso é um sistema de segurança que previne ataques -->
                                                                     <div class="card-body">
                                                                         <div class="form-group mb-3 row">
                                                                             <label class="form-label">Nome</label>
@@ -102,6 +102,13 @@
                                                                             </div>
                                                                         </div>
 
+                                                                        <div class="form-group row">
+                                                                            <div class="col-lg-12 col-xl-12">
+                                                                                <button type="submit" class="btn btn-primary">Atualizar Perfil</button>
+                                                                                <button type="button" class="btn btn-secondary">Cancelar</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </form>
                                                                     </div><!--end card-body-->
                                                                 </div>
                                                             </div>
@@ -116,24 +123,23 @@
                                                                             </div><!--end col-->                                                       
                                                                         </div>
                                                                     </div>
-
                                                                     <div class="card-body mb-0">
                                                                         <div class="form-group mb-3 row">
                                                                             <label class="form-label">Senha Atual</label>
                                                                             <div class="col-lg-12 col-xl-12">
-                                                                                <input class="form-control" type="password" placeholder="Senha Atual">
+                                                                                <input class="form-control" type="password" name="old_password" placeholder="Senha Atual" required>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group mb-3 row">
                                                                             <label class="form-label">Nova Senha</label>
                                                                             <div class="col-lg-12 col-xl-12">
-                                                                                <input class="form-control" type="password" placeholder="Nova Senha">
+                                                                                <input class="form-control" type="password" name="new_password" placeholder="Nova Senha" required>
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group mb-3 row">
                                                                             <label class="form-label">Confirmar Senha</label>
                                                                             <div class="col-lg-12 col-xl-12">
-                                                                                <input class="form-control" type="password" placeholder="Confirmar Senha">
+                                                                                <input class="form-control" type="password" name="new_password_confirmation" placeholder="Confirmar Senha" required>
                                                                             </div>
                                                                         </div>
 
@@ -143,6 +149,7 @@
                                                                                 <button type="button" class="btn btn-danger">Cancelar</button>
                                                                             </div>
                                                                         </div>
+                                                </form>
 
                                                                     </div><!--end card-body-->
                                                                 </div>
@@ -150,8 +157,7 @@
 
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </form> <!-- end profile_setting -->
+                                                </div><!-- end profile_setting -->
                                         </div> <!-- end tab-content -->
                                     </div>
                                 </div>

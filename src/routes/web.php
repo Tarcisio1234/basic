@@ -33,4 +33,6 @@ Route::post('/verificar', [AdminController::class, 'verifyCode'])->name('custom.
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [AdminController::class, 'AdminProfile'])->name('admin.profile');
+
+    Route::post('/profile/store', [AdminController::class, 'ProfileStore'])->name('profile.store');
 });
