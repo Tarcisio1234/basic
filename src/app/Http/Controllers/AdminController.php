@@ -88,7 +88,13 @@ class AdminController extends Controller
             }
         }
         $data->save();
-        return redirect()->back()->with('success', 'Perfil atualizado com sucesso!');
+
+        $notification = array(
+            'message' => 'Perfil atualizado com sucesso!',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification);
     }
 
     private function deleteOldPhoto($photoPath){
