@@ -54,8 +54,8 @@
                                                                             </div><!--end col-->                                                       
                                                                         </div>
                                                                     </div>
-                                                <form action="{{ route('profile.store') }}" method="POST" enctype="multipart/form-data">
-                                                    @csrf <!-- Isso é um sistema de segurança que previne ataques -->
+                                                                    <form action="{{ route('profile.store') }}" method="POST" enctype="multipart/form-data">
+                                                                        @csrf
                                                                     <div class="card-body">
                                                                         <div class="form-group mb-3 row">
                                                                             <label class="form-label">Nome</label>
@@ -123,33 +123,44 @@
                                                                             </div><!--end col-->                                                       
                                                                         </div>
                                                                     </div>
+
+                                                                    <form action="{{ route('admin.passoword.updatePassword') }}" method="POST">
+                                                                        @csrf
                                                                     <div class="card-body mb-0">
                                                                         <div class="form-group mb-3 row">
                                                                             <label class="form-label">Senha Atual</label>
                                                                             <div class="col-lg-12 col-xl-12">
-                                                                                <input class="form-control" type="password" name="old_password" placeholder="Senha Atual" required>
+                                                                                <input class="form-control @error('old_password') is-invalid @enderror" type="password" placeholder="Senha Atual" id="old_password" name="old_password" required>
+                                                                                @error('old_password')
+                                                                                <span class="text-danger">{{ $message }}</span>
+                                                                                @enderror
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group mb-3 row">
                                                                             <label class="form-label">Nova Senha</label>
                                                                             <div class="col-lg-12 col-xl-12">
-                                                                                <input class="form-control" type="password" name="new_password" placeholder="Nova Senha" required>
+                                                                                <input class="form-control @error('new_password') is-invalid @enderror" type="password" placeholder="Nova Senha" id="new_password" name="new_password" required>
+                                                                                @error('new_password')
+                                                                                <span class="text-danger">{{ $message }}</span>
+                                                                                @enderror
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group mb-3 row">
                                                                             <label class="form-label">Confirmar Senha</label>
                                                                             <div class="col-lg-12 col-xl-12">
-                                                                                <input class="form-control" type="password" name="new_password_confirmation" placeholder="Confirmar Senha" required>
+                                                                                <input class="form-control @error('new_password_confirmation') is-invalid @enderror" id="new_password_confirmation" type="password" name="new_password_confirmation" placeholder="Confirmar Senha" required>
+                                                                                @error('new_password_confirmation')
+                                                                                <span class="text-danger">{{ $message }}</span>
+                                                                                @enderror
                                                                             </div>
                                                                         </div>
 
                                                                         <div class="form-group row">
                                                                             <div class="col-lg-12 col-xl-12">
                                                                                 <button type="submit" class="btn btn-primary">Alterar Senha</button>
-                                                                                <button type="button" class="btn btn-danger">Cancelar</button>
                                                                             </div>
                                                                         </div>
-                                                </form>
+                                                                    </form>
 
                                                                     </div><!--end card-body-->
                                                                 </div>
