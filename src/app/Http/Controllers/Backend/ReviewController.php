@@ -10,8 +10,15 @@ class ReviewController extends Controller
 {
     public function AllReview()
     {
-        $review = Review::latest()->get();
-        return view('admin.backend.review.all_review', compact('review'));
+        $reviews = Review::latest()->get();
+        return view('admin.backend.review.all_review', compact('reviews'));
+        //compact serve para passar os dados para a view
          
-    }    
+    }  
+    
+    public function AddReview()
+    {
+        return view('admin.backend.review.add_review');
+         
+    }
 }

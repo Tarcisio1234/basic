@@ -15,7 +15,7 @@
                             </a>
                             <a href="index.html" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img src="{{asset('backend/ssets/images/logo-sm.png')}}a" alt="" height="22">
+                                    <img src="{{asset('backend/assets/images/logo-sm.png')}}" alt="" height="22">
                                 </span>
                                 <span class="logo-lg">
                                     <img src="{{asset('backend/assets/images/logo-dark.png')}}" alt="" height="24">
@@ -51,10 +51,10 @@
                                 <div class="collapse" id="sidebarAuth">
                                     <ul class="nav-second-level">
                                         <li>
-                                            <a href="{{route('all.review')}}" class="tp-link">All Reviews</a>
+                                            <a href="{{route('all.review')}}" class="tp-link">Todas as avaliações</a>
                                         </li>
                                         <li>
-                                            <a href="auth-register.html" class="tp-link">Add Review</a>
+                                            <a href="{{route('add.review')}}" class="tp-link">Adicionar Avaliação</a>
                                         </li>
                                     </ul>
                                 </div>
