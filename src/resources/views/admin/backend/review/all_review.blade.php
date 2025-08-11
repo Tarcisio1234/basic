@@ -24,8 +24,8 @@
                                     <th>Numero sereal</th>
                                     <th>Nome</th>
                                     <th>Posição</th>
+                                    <th>Imagem</th>
                                     <th>Mensagem</th>
-                                    <th>Ação</th>
                                 </tr>
                             </thead>
                             <tbody>

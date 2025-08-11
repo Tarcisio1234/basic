@@ -44,7 +44,7 @@
                                                                             </div><!--end col-->                                                       
                                                                         </div>
                                                                     </div>
-                                                                    <form action="#" method="POST" enctype="multipart/form-data">
+                                                                    <form action="{{ route('store.review') }}" method="POST" enctype="multipart/form-data">
                                                                         @csrf
                                                                     <div class="card-body">
                                                                         <div class="form-group mb-3 row">
