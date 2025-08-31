@@ -36,7 +36,7 @@
                                     <td>{{$item->position}}</td>
                                     <td><img src="{{ asset($item->image)}}" style="width:70px; height:40px;"></td>
                                     <td>{{$item->message}}</td>
-                                    <td><a href="" class="btn btn-success rounded-pill">Editar</a></td>
+                                    <td><a href="{{ route('edit.review',$item->id)}}" class="btn btn-success rounded-pill">Editar</a></td>
                                     <td><a href="" class="btn btn-danger rounded-pill">Excluir</a></td>
                                 @endforeach
                             </tbody>
