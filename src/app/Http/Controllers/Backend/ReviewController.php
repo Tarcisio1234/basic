@@ -112,4 +112,17 @@ class ReviewController extends Controller
         return redirect()->route('all.review')->with($notification);
         }
     }
+
+    public function DeleteReview($id){
+        $item = Review::find($id);
+        $img = $item->image;
+        unlink($img);
+
+        Review::find($id)->delete();
+        $notification = array(
+            'message' => 'Avaliação excluída com sucesso!', 
+            'alert-type' => 'success'
+        );
+        return redirect()->back()->with($notification);
+    }
 }
