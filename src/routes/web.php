@@ -56,7 +56,7 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::controller(SliderController::class)->group(function () {
-        
-    Route:: get('add/slider', 'AddSlider')->name('add.slider');
+
+    Route:: get('get/slider', 'GetSlider')->name('get.slider');
     });
 });
